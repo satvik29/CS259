@@ -16,6 +16,11 @@ void dot_prod_kernel(const float *a, const float *b, float *c, const int num_ele
   /***************************
    * your code goes here ... *
    ***************************/
+  c[0] = 0.f;
+
+  for (int i = 0; i < num_elems; i++) {
+    c[0] += a[i] * b[i];
+  }
 }
 
 }  // extern "C"
